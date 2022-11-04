@@ -5,8 +5,8 @@ pacientes=[]
 #============================================================
 
 print('=-=-=-=-=-=-=-=-=-= OFTALMED ATENDIMENTO =-=-=-=-=-=-=-=-=-=')
-print('=-=' *20)
 while True:
+    print('=-=' * 20)
     opcao = str(input('''[1]NOME
 [2]CONVENIOS
 [3]AGENDA MEDICA
@@ -575,4 +575,51 @@ Ponto de referência: Ao lado da panificadora *MODELO*.''')
                 for pac in pacientes:
                     arquivo.write(str(pac) + '\n')
     if opcao == '3':
-        print(pacientes)
+        opcaoUnidade = str(input('''=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+[1]COELHO DE RESENDE
+[2]SÃO PEDRO
+[3]JOCKEY
+Opção: '''))
+        if opcaoUnidade == '1':
+            print('''=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+SEGUNDA     -        TERÇA     -      QUARTA       -       QUINTA     -     SEXTA
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+                                  MANHÃ:            
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+DR. SAMUEL    -    DR. SAMUEL   -   DR. SAMUEL     -    DR. SAMUEL     -   DR. SAMUEL
+    &                   &                &                    &                 &
+DRa. LORENA   -    DR. SAMUEL   -   DRa. LORENA    -    DR. SAMUEL     -   DR. SAMUEL
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+                                  TARDE:            
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+DR. SAMUEL    -    DR. SAMUEL   -   DR. SAMUEL     -    DR. SAMUEL
+     &                  &                &                  &
+DR. SAMUEL    -    DRa. ROSSANA -   DR. FERNANDO   -    DR. SAMUEL
+''')
+        if opcaoUnidade == '2':
+            print('''=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+SEGUNDA     -        TERÇA     -      QUARTA       -       QUINTA     -     SEXTA
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+                                  MANHÃ:            
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+DR. SAMUEL    -    DRa. ROSSANA -   DR. SAMUEL     -    DR. SAMUEL     -   DR. SAMUEL
+    &                   &                &                    &                 &
+DR. SAMUEL    -    DRa. ROSSANA -   DR. FERNANDO   -    DRa. NATALIA   -   DR. SAMUEL
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+                                  TARDE:            
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+DR. DANIEL    -    DRa. KASSANDRA -  DR. SAMUEL     -    DR. HELTON
+     &                  &                &                  &
+DR. DANIEL    -    DRa. KASSANDRA -  DR. DANIEL     -    DR. HELTON
+''')
+        if opcaoUnidade == '3':
+            print('''=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-JOCKEY=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+SEGUNDA     -        TERÇA     -      QUARTA       -       QUINTA     -     SEXTA
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+                                  TARDE:            
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=
+DRa. KASSANDRA                          -                                DRa. LORENA
+     &                 
+DR. SAMUEL = 16:30 -DR. SAMUEL          -                 DR. SAMUEL
+OBS: DRa. KASSANDRA, ATENDE APENAS DE 15 EM 15 DIAS. -  DRa. LORENA, ATENDE SOMENTE PARTICULAR SOBRE AVISO.
+''')
